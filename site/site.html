@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - site2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Points on a map</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <!-- Google Font CSS!-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='map'></div>
+  <script>
+  // The value for 'accessToken' begins with 'pk...'
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoid3hoYnloa2siLCJhIjoiY2xjcGRhZWJnMXM3dTNvcDhsYWFwdjlteiJ9.ZrG5cyH-eqnczL4GY9-_TA";
+
+const ob = "mapbox://styles/wxhbyhkk/cldezwgkf004d01oxbrkt9jfj";
+const pm102019 = "mapbox://styles/wxhbyhkk/cldf8z5d7002x01qjsu2bpx90";
+const map = new mapboxgl.Map({
+  container: "map", // container ID
+  style: ob,
+  center: [-0.1276, 51.5072],
+  zoom: 14
+});  
+  </script>
+  <div id="menu">
+    <h2>Select a part</h2>
+    <label class="container">Observation point
+      <input id="ob" type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">pm10 2019
+      <input id="pm102019" type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+    <div class="map-overlay" id="features">
+    <h2>Scottish Index of Multiple Deprivation (SIMD)</h2>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
