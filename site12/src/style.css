@@ -1,0 +1,184 @@
+/*Style for h2*/
+h2 {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top:5px;
+  font-family: 'Shantell Sans', cursive;
+}
+h4 {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 10px;
+  font-family: 'Shantell Sans', cursive;
+}
+/*Style for h3*/
+h3 {
+  border-top: 15px blue;
+  font-family: 'Shantell Sans', cursive;
+  
+}
+h5 {
+  margin: 10px;
+  font-size: 18px;
+  font-family: 'Shantell Sans', cursive;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+/*Style for p*/
+p {
+  font-size: 15px;
+  font-family: 'Shantell Sans', cursive;
+}
+p2 {
+  margin: 10px;
+  font-family: 'Shantell Sans', cursive;
+}
+
+/*Style for the pop-up*/
+.my-popup .mapboxgl-popup-content {
+  width: 400px;
+  background: rgba(83, 92, 104, 0.9);
+  border-top: 50px black;
+  padding: 20px;
+  color: white;
+   border:inset 5px #ace3f6;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#menu {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  font-family: 'Shantell Sans', cursive;
+   border:inset 5px #ace3f6;
+  top:0;
+  bottom:1;
+  margin-left: 50px;
+  margin-right: 60px;
+  margin-top: 10px;
+  border-style:inset;
+  height:190px;
+ 
+ }
+/**
+* Set rules for how the map overlays
+* (information box and legend) will be displayed
+* on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  margin-right: 20px;
+  font-family: font-family: 'Sofia Sans Semi Cndensed', sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+/*Pop-up window in the upper right corner*/
+#features {
+  top: 1;
+  height: 190px;
+  margin-top: 20px;
+  width: 400px;
+   border:inset 5px #ace3f6;
+   background-color:#edefec;
+}
+
+
+
+#legend {
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 30px;
+  height: 100px;
+  bottom: 80px;
+  width: 200px;
+}
+.legend-key {
+  display: inline;
+  border-radius: 20%;
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+}
+.mapboxgl-ctrl-geocoder {
+  width: 280px !important;
+}
+ h6 {
+   font-family: 'Shantell Sans', cursive;
+        font-size: 20px;
+        line-height: 30px;
+   margin-top:10px;
+      }
+
+      h7 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        font-family: 'Shantell Sans', cursive;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2dc4b2;
+        font-family: 'Shantell Sans', cursive;
+      }
+
+      #console {
+        position: absolute;
+        height: 270px;
+        margin: 10px;
+        width: 240px;
+        background-color: white;
+        padding: 10px 20px;
+          bottom: 0;
+  left: 0;
+         background-color:#edefec;
+        border:inset 5px #ace3f6;
+      }
+.session {
+        margin-bottom: 20px;
+      }
+
+      .row {
+        height: 12px;
+        width: 100%;
+      }
+
+      .colors {
+        background: linear-gradient(
+          to right,
+         #fcfbfd,
+         #f0eff6,
+        #dbdbeb,
+         #bcbddc,
+          #9d99c7,
+          #807dba,
+          #6a51a4,
+          #552790,
+          #3f007d
+        );
+        margin-bottom: 5px;
+      }
+
+      .label {
+        width: 15%;
+        display: inline-block;
+        text-align: center;
+        font-size:5px;
+        font-family: 'Shantell Sans', cursive;
+      }

@@ -1,0 +1,170 @@
+<html lang='en'>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+
+  <meta charset='utf-8' />
+  <title>lala</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <!-- Google Font CSS!-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <style>
+
+  
+
+    
+   
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  /*Distance between buttons and between text and buttons*/
+  padding-left:30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size:16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #276419;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+  </style>
+</head>
+
+<body>
+  <div id='map'></div>
+  <div id="console">
+      <h6>2019 London pollution monitoring points and pollutants</h6> 
+    <h7><strong>Click the globe to view the detection site information</strong><br /></h7>
+    
+        <h7>  <br /></h7>
+    
+      <div class="session">
+        <h7>Severity</h7>
+        <div class="row colors"></div>
+        <div class="row labels">
+ <div class="label">light   </div>
+           <div class="label">    </div>
+         
+          <div class="label">      </div>
+           <div class="label">moderate   </div>
+ 
+           <div class="label">    </div>
+ <div class="label"><strong>severe </strong>   </div>
+
+        </div>
+      </div>
+      <div class="session">
+        </div>
+      </div>
+    </div>
+  <div class="map-overlay" id="features">
+    <h4>Location information and emissions over the years</h4>
+    <div id="pd">
+      <p2> Hover over a data zone</p2>
+    </div>
+  </div>  
+  <script>
+    
+  // The value for 'accessToken' begins with 'pk...'
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoid3hoYnloa2siLCJhIjoiY2xjcGRhZWJnMXM3dTNvcDhsYWFwdjlteiJ9.ZrG5cyH-eqnczL4GY9-_TA";
+
+
+const pm10 = "mapbox://styles/wxhbyhkk/cldf8z5d7002x01qjsu2bpx90";
+const pm25 = "mapbox://styles/wxhbyhkk/cldf8xtew001401o4jiodv736";
+const co2 = "mapbox://styles/wxhbyhkk/cldf8uimk000j01ny6f0umpen";
+    const nox = "mapbox://styles/wxhbyhkk/cldf8sazl000101phwhreo9fw";
+    const site = "mapbox://styles/wxhbyhkk/cldezwgkf004d01oxbrkt9jfj";
+const map = new mapboxgl.Map({
+  container: "map", // container ID
+  style:site,
+  center: [-0.1276, 51.5072],
+  zoom: 9
+});  
+  </script>
+  <div id="menu">
+    <h2>Select a pollutant</h2>
+ 
+    <label class="container">pm10
+      <input id="pm10" type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+   <label class="container">nox
+      <input id="nox" type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label><label class="container">co2
+      <input id="co2" type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">pm2.5
+      <input id="pm25" type="radio" name="radio">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
+ </body>
+</html>
