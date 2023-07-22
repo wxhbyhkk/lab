@@ -1,0 +1,56 @@
+   /*Removed default margins.*/
+body {
+      margin: 0;
+      padding: 0;
+    }
+   /*This can fill the entire page with map elements and fill the available space.*/
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+/*Style for h3*/
+h3 {
+  border-top: 15px blue;
+  font-family: Lato, sans-serif;
+}
+/*Style for p*/
+p {
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+/*Style for the pop-up*/
+.my-popup .mapboxgl-popup-content {
+  width: 200px;
+  background: rgba(83, 92, 104, 0.9);
+  border-top: 50px black;
+  padding: 20px;
+  color: white;
+}
+/*Style for h3*/
+h3 {
+  border-top: 15px blue;
+  font-family: Lato, sans-serif;
+}
+/*Style for p*/
+p {
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+/* Style for the pop-up */
+.my-popup .mapboxgl-popup-content {
+  width: 400px; /* Set the width of the pop-up box to 400 pixels*/
+  background: rgba(83, 92, 104, 0.9); /* Set the background color to an RGBA value with transparency */
+  border-top: 50px black; /* Set the top border to a black border with a width of 50 pixels*/
+  padding: 20px; /* Set the inner margin to 20 pixels*/
+  color: white; /* Set the text color to white*/
+  overflow-y: auto; /* Add this rule to enable vertical scrollbars */
+  max-height: 300px; /* Adjust the maximum height value as needed */
+}
+.mapboxgl-ctrl-geocoder {
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+  width: 280px ;
+}
