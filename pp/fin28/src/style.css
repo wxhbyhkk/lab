@@ -1,0 +1,94 @@
+  /* Removed default margins. */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* This can fill the entire page with map elements and fill the available space. */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style for h3 */
+h3 {
+  border-top: 15px blue;
+  font-family: Lato, sans-serif;
+}
+
+/* Style for p */
+p {
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+
+/* Style for the pop-up */
+.my-popup .mapboxgl-popup-content {
+  width: 250px;
+  background: rgba(83, 92, 104, 0.9);
+  border-top: 50px black;
+  padding: 20px;
+  color: white;
+  max-height: 350px; /* 设置最大高度 */
+  overflow: auto; /* 添加滚动条 */
+}
+
+/* Style for the chart container */
+#chart-container {
+  display: block; /* Set initial chart container to hidden */
+  background-color: rgba(224, 224, 254, 0.7);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Add this line to center the text */
+}
+
+/* Additional styling for the chart */
+#weather-chart {
+  width: 400px;
+  height: 150px;
+}
+
+/* Style for the toggle button container */
+#toggle-container {
+  text-align: center; /* Center the button horizontally */
+  position: absolute;
+  top: 26.5%; /* Set the top position to 50% (center vertically) */
+  left: 8px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Use translateY to vertically center the button */
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+#toggle-button {
+  padding: 10px 10px;
+  background-color:#e0e0e0;
+  color: #1a1a1a;
+  border: none;
+  cursor: pointer;
+   border-radius: 20px; /* Set the border radius to create a rounded button */
+}
+.mapboxgl-ctrl-minimap {
+  opacity: 0.85; 
+}
+#toggleMinimap {
+
+  width: 30px;
+ border-radius: 10px; /* Set the border radius to create a rounded button */
+  z-index: 1;
+  padding: 8px 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;  text-align: center; /* Center the button horizontally */
+  position: absolute;
+  top:32.2%; /* Set the top position to 50% (center vertically) */
+  left: 10px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Use translateY to vertically center the button */
+  z-index: 1; /* Ensure the button is above other elements */
+ 
+}
