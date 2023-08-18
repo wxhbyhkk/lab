@@ -1,0 +1,216 @@
+/* Removed default margins. */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* This can fill the entire page with map elements and fill the available space. */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style for h3 */
+h3 {
+  border-top: 15px blue;
+  font-family: Lato, sans-serif;
+}
+
+/* Style for p */
+p {
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+}
+
+/* Style for the pop-up */
+.my-popup .mapboxgl-popup-content {
+  width: 250px;
+  background: rgba(83, 92, 104, 0.9);
+  border-top: 50px black;
+  padding: 20px;
+  color: white;
+  max-height: 350px; /* 设置最大高度 */
+  overflow: auto; /* 添加滚动条 */
+}
+
+/* Style for the chart container */
+#chart-container {
+  display: block; /* Set initial chart container to hidden */
+  background-color: rgba(224, 224, 254, 0.7);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Add this line to center the text */
+}
+
+/* Additional styling for the chart */
+#weather-chart {
+  width: 400px;
+  height: 150px;
+}
+
+/* Style for the toggle button container */
+#toggle-container {
+  text-align: center; /* Center the button horizontally */
+  position: absolute;
+  top: 26.5%; /* Set the top position to 50% (center vertically) */
+  left: 8px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Use translateY to vertically center the button */
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+#toggle-button {
+  padding: 10px 10px;
+  background-color:#e0e0e0;
+  color: #1a1a1a;
+  border: none;
+  cursor: pointer;
+   border-radius: 20px; /* Set the border radius to create a rounded button */
+}
+.mapboxgl-ctrl-minimap {
+  opacity: 0.85; 
+}
+#toggleMinimap {
+
+  width: 30px;
+ border-radius: 10px; /* Set the border radius to create a rounded button */
+  z-index: 1;
+  padding: 8px 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;  text-align: center; /* Center the button horizontally */
+  position: absolute;
+  top:32.2%; /* Set the top position to 50% (center vertically) */
+  left: 10px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Use translateY to vertically center the button */
+  z-index: 1; /* Ensure the button is above other elements */
+ 
+}
+
+
+
+button#helpButton {
+  position: fixed;
+  top:1%; /* 将按钮的顶部定位到页面的中间 */
+  left: 75%; /* 将按钮的左侧定位到页面的中间 */
+
+  z-index: 9999; /* 设置按钮的层级，确保按钮显示在最上层 */
+  background-color: #007bff; /* 蓝底色 */
+  color: #fff; /* 白色图标 */
+  border: none;
+  border-radius: 50%; /* 将按钮设置为圆形 */
+  padding: 10px; /* 设置按钮内边距，使其看起来更美观 */
+  font-size: 20px; /* 设置图标的大小 */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+}
+
+.popop {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  max-height: 350px; /* 设置最大高度 */
+  overflow-y: auto; /* 添加纵向滚动条 */
+}
+
+
+/* 关闭按钮样式 */
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+button#headButton {
+  position: fixed;
+  top:1%; /* 将按钮的顶部定位到页面的中间 */
+  left: 70%; /* 将按钮的左侧定位到页面的中间 */
+
+  z-index: 9999; /* 设置按钮的层级，确保按钮显示在最上层 */
+  background-color: #007bff; /* 蓝底色 */
+  color: #fff; /* 白色图标 */
+  border: none;
+  border-radius: 50%; /* 将按钮设置为圆形 */
+  padding: 10px; /* 设置按钮内边距，使其看起来更美观 */
+  font-size: 20px; /* 设置图标的大小 */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+}
+
+
+
+
+/* 弹窗2样式 */
+.pop2 {
+  /* 弹窗样式 */
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+}
+
+
+
+/* 按钮样式 */
+.pop1 button,
+.pop2 button {
+  /* 按钮样式 */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* 输入框样式 */
+.pop1 textarea {
+  /* 输入框样式 */
+  width: 90%;
+  height: 220px; /* 根据需要调整高度 */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* 弹窗样式 */
+.pop1 {
+   width: 600px;
+  height: 280px; 
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}

@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <!-- Specify the Character encoding method of the document-->
+  <meta charset="utf-8">
+  <!--Used to set up web page viewport-->
+  <title>Weather Map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  meta description-->
+  <meta name="description" content="This is a website about the London weather forecast">
+  <!-- Mapbox API -->
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script> <!-- Include the Mapbox GL JS library -->
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" > <!-- Include the Mapbox GL CSS styles -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Include Font Awesome CSS styles -->
+  <link rel="stylesheet" href="styles.css"> 
+  <!-- Google Font CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> <!-- Include the Lato font CSS styles -->
+  <!-- Add a container for the chart in the bottom-right corner -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+</head>
+<body>
+  <div id="map"></div> <!-- Create a div element with id "map" to hold the map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
+  <!-- Add a container for the chart in the bottom-right corner -->
+  <div id="chart-container">
+    <!-- Content for the chart goes here -->
+    <h3>Five day temperature change from now</h3>
+    <canvas id="weather-chart" width="200" height="150"></canvas>
+  </div>
+
+  <!-- Add a container for the toggle button -->
+ <div id="toggle-container">
+    <!-- Replace "toggle-button" text with Font Awesome icon -->
+    <button id="toggle-button"><i class="fas fa-chart-line"></i></button>
+  </div>
+    	<script type="text/javascript" src="mapboxgl-control-minimap.js"></script>
+  <button id="toggleMinimap"><i class="fas fa-map"></i></button>
+
+  
+ <button id="helpButton" onclick="showPopop()"><i class="fas fa-question-circle"></i></button>
+
+ <div class="popop" id="popop">
+    <div class="popup-content">
+      <h3>This is the instructions for using the webpage</h3>
+<p>
+This webpage can help users understand the weather conditions in the UK. The cloud icon on the map shows the location of the weather station. You can click on the weather station to learn its name, location, ID, weather conditions near the station, wind speed, and weather forecasts for the next four days.</p>
+<h3>Head button</h3>
+<p>Can fill out survey questionnaires</p>
+<h3>Question mark button</h3>
+<p>Instructions for use can be opened and closed</p>
+<h3>Search box in the upper right corner</h3>
+<p>You can search for the region you want to know and locate it</p>
+<h3>The plus button on the left</h3>
+<p>Can reduce perspective</p>
+<h3>The minus button on the left</h3>
+<p>Can improve perspective</p>
+<h3>Arrow button on the left</h3>
+<p>Can rotate the perspective</p>
+<h3>The bull's-eye button on the left</h3>
+<p>Can locate your location</p>
+<h3>A rectangular button composed of four arrows</h3>
+<p>Can make the map full screen</p>
+<h3>Line chart button</h3>
+<p>You can open and close the Line chart at the lower right corner. The Line chart can display the temperature changes in the next few days</p>
+<h3>Map button</h3>
+<p>You can open and close the mini map in the bottom left corner, which can display the location of the map in the UK on the screen
+ </p>
+         
+      <button onclick="closePopop()">close</button>
+    </div>
+  </div>
+
+
+
+<button id="headButton" onclick="showPop1()">
+  <i class="fas fa-user"></i>
+</button>
+
+<div class="pop1" id="pop1">
+  <textarea placeholder="Please enter your opinion"></textarea>
+  <button onclick="submitPop1()">submit</button>
+  <button onclick="closePop1()">close</button>
+</div>
+
+<!-- 弹窗2 -->
+<div class="pop2" id="pop2">
+  <p>Thank you for your valuable feedback,cheers</p>
+  <button onclick="closePop2()">close</button>
+</div>
+
+ 
+
+</body>
+</html>
